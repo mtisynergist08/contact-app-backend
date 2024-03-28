@@ -1,0 +1,162 @@
+### Register User
+
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "Tarmizi",
+  "password": "123456",
+  "name": "Tarmizi Ismail"
+}
+
+### Login User
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "Tarmizi",
+  "password": "123456"
+}
+
+### Get Current User
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 31a4fcee-a46d-4740-b555-48fd930a0062
+
+### Update Current User
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 31a4fcee-a46d-4740-b555-48fd930a0062
+
+{
+  "name": "Mohammad Tarmizi"
+}
+
+### Logout User
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 31a4fcee-a46d-4740-b555-48fd930a0062
+
+### Add a contact
+
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+{
+  "first_name": "Sahru",
+  "last_name": "Rizan",
+  "email": "sahru_rizan@gmail.com",
+  "phone": "0178887778"
+}
+
+### Get all contacts
+
+GET http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+### Get all contacts using filter
+
+GET http://localhost:3000/api/contacts?email=sahru_rizan@gmail.com
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+### Get all contacts using pagination
+
+GET http://localhost:3000/api/contacts?size=2&page=2
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+### Get a contact using id
+
+GET http://localhost:3000/api/contacts/1801
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+### Update a contact
+
+PUT http://localhost:3000/api/contacts/1801
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+{
+  "first_name": "Sahrurizan",
+  "last_name": "Ismail",
+  "email": "sahru_rizan@gmail.com",
+  "phone": "0178887778"
+}
+
+### Delete a contact
+
+DELETE http://localhost:3000/api/contacts/1801
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+### Address Api
+### Create an address
+
+POST http://localhost:3000/api/contacts/1800/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+{
+  "street": "Jalan PR1MA 33",
+  "city": "Sungai Petani",
+  "province": "Kedah",
+  "country": "Malaysia",
+  "postal_code": "08000"
+}
+
+### Get all addresses
+
+GET http://localhost:3000/api/contacts/1800/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+### Get an address using id
+
+GET http://localhost:3000/api/contacts/1800/addresses/151
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+### Update an address
+
+PUT http://localhost:3000/api/contacts/1800/addresses/151
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
+
+{
+  "street": "1027, Jalan PR1MA 33",
+  "city": "Sungai Petani",
+  "province": "Kedah",
+  "country": "Malaysia",
+  "postal_code": "08000"
+}
+
+### Delete an address
+
+DELETE http://localhost:3000/api/contacts/1800/addresses/151
+Content-Type: application/json
+Accept: application/json
+Authorization: 9c96d555-1adb-4938-9304-6963b0929415
